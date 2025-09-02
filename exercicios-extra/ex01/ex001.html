@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Treinando iframes</title>
+    <style>
+
+       * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+       }
+
+
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f0f2f5;
+            margin: auto;
+            color: #222;
+
+        }
+
+        h1 {
+            background-color: #3498db;
+            color: white;
+            padding: 30px;
+            text-align: center;
+            margin-bottom: 10px;
+            font-weight: normal;
+            text-shadow: 2px 1px 0px rgba(0, 0, 0, 0.377);
+            border-radius: 5px;
+        }
+
+        nav {
+            background-color: #2c3e50;
+            padding: 10px;
+            border-radius: 10px;
+            margin-top: ;
+        }
+
+        nav p {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 1.5em;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: white;
+
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            border-radius: 8px;
+            padding: 6px 12px;
+            font-weight: bold;
+            transition-duration: 0.3s;
+            font-size: 1.1em;
+        }
+
+        nav a:hover {
+            background-color: #1abc9c;
+            text-decoration: none;
+            color: rgb(54, 52, 52);
+        }
+
+        iframe {
+            width: 100%;
+            max-width: 600px;
+            height: 500px;
+            border: 1px solid black;
+        }
+
+        nav ul {
+            list-style: square;
+            padding: 0;
+
+        }
+
+        nav li {
+            margin: 5px 0;
+        }
+
+        nav a {
+            display: inline-block;
+            padding: 8px 12px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Escolha o cantor que você mais gosta</h1>
+    <nav>
+        <p>Clique nos nomes para que abra uma janela de informações sobre cada um deles</p>
+        <ul>
+            <li class="puma"><a href="pags-extra/pagina01.html" target="frame">pumapjl</a></li>
+            <li class="cg"><a href="pags-extra/pagina02.html" target="frame">CostaGold</a></li>
+            <li class="sono"><a href="pags-extra/pagina03.html" target="frame">SonoTWS</a></li>
+        </ul>
+    </nav>
+
+    <iframe src="" name="frame" frameborder="1">
+        <p>Infelizmente o seu navegador não é compatível.</p>
+    </iframe>
+</body>
+</html>
