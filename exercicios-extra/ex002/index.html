@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulários</title>
+    <style>
+        * {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        header {
+            margin: auto;
+            text-align: center;
+            background-color: rgb(221, 199, 113);
+            padding: 10px;
+            border-bottom: 2px solid black;
+            text-shadow: 1px 1px 2px rgba(53, 49, 34, 0.349);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Crie sua conta connosco!</h1>
+    </header>
+    <form action="cadastro.php" method="post">
+        <fieldset>
+            <legend>Informações Pessoais</legend>
+            <p>
+                <label for="inome">Nome Completo:</label>
+                <input type="text" name="nome" id="inome" required>
+            </p>
+
+            <p>
+                <label for="iemail">Email:</label>
+                <input type="email" name="email" id="iemail" required>
+            </p>
+
+            <label for="isenha">Senha:</label>
+            <input type="password" name="senha" id="isenha" minlength="8" required>
+
+            <p>
+                <label for="iidade">Idade:</label>
+                <input type="number" name="idade" id="iidade" min="13">
+            </p>
+
+            <p>
+                <label for="inasc">Data de Nascimento:</label>
+                <input type="date" name="nasc" id="inasc" required>
+            </p>
+        </fieldset>
+
+        <fieldset>
+            <legend>Morada</legend>
+
+            <p>
+                <label for="irua">Rua:</label>
+                <input type="text" name="rua" id="irua" required>
+            </p>
+
+            <p>
+                <label for="icidade">Cidade:</label>
+                <input type="text" name="cidade" id="icidade" list="lstcidades" required>
+                <datalist id="lstcidades">
+                    <option value="Porto">Porto</option>
+                </datalist>
+            </p>
+
+        </fieldset>
+
+
+        <fieldset>
+            <legend>Ações</legend>
+            <p>
+                <input type="submit" value="Enviar">
+                <input type="reset" value="Limpar">
+            </p>
+        </fieldset>
+    </form>
+</body>
+</html>
