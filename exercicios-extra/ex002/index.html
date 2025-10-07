@@ -3,22 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos/style.css">
     <title>Formulários</title>
-    <style>
-        * {
-            margin: 0;
-            font-family: Arial, Helvetica, sans-serif;
-        }
-
-        header {
-            margin: auto;
-            text-align: center;
-            background-color: rgb(221, 199, 113);
-            padding: 10px;
-            border-bottom: 2px solid black;
-            text-shadow: 1px 1px 2px rgba(53, 49, 34, 0.349);
-        }
-    </style>
+    
 </head>
 <body>
     <header>
@@ -29,20 +16,20 @@
             <legend>Informações Pessoais</legend>
             <p>
                 <label for="inome">Nome Completo:</label>
-                <input type="text" name="nome" id="inome" required>
+                <input type="text" name="nome" id="inome" required autocomplete="name">
             </p>
 
             <p>
                 <label for="iemail">Email:</label>
-                <input type="email" name="email" id="iemail" required>
+                <input type="email" name="email" id="iemail" required autocomplete="email">
             </p>
 
             <label for="isenha">Senha:</label>
-            <input type="password" name="senha" id="isenha" minlength="8" required>
+            <input type="password" name="senha" id="isenha" minlength="8" required autocomplete="new-password">
 
             <p>
                 <label for="iidade">Idade:</label>
-                <input type="number" name="idade" id="iidade" min="13">
+                <input type="number" name="idade" id="iidade" min="13" max="120" required>
             </p>
 
             <p>
@@ -56,21 +43,84 @@
 
             <p>
                 <label for="irua">Rua:</label>
-                <input type="text" name="rua" id="irua" required>
+                <input type="text" name="rua" id="irua" required autocomplete="street-address">
             </p>
 
             <p>
                 <label for="icidade">Cidade:</label>
-                <input type="text" name="cidade" id="icidade" list="lstcidades" required>
+                <input type="text" name="cidade" id="icidade" list="lstcidades" required autocomplete="address-level2">
                 <datalist id="lstcidades">
                     <option value="Porto">Porto</option>
+                    <option value="Gaia">Vila Nova De Gaia</option>
+                    <option value="Almada"></option>
+                    <option value="Amadora"></option>
+                    <option value="Cascais"></option>
+                    <option value="Lisboa"></option>
+                    <option value="Loures"></option>
+                    <option value="Odivelas"></option>
+                    <option value="Oeiras"></option>
+
                 </datalist>
+            </p>
+
+            <p>
+                <label for="iest">Estado:</label>
+                <select name="est" id="iest" size="1" style="width: 170px; padding: 0;">
+                    <optgroup>
+                        <option value="Alentejo">Alentejo</option>
+                        <option value="Algarve">Algarve</option>
+                        <option value="Beira">Beira</option>
+                        <option value="Douro Litoral">Douro Litoral</option>
+                        <option value="Estremadura">Estremadura</option>
+                        <option value="Minho">Minho</option>
+                        <option value="Ribatejo">Ribatejo</option>
+                        <option value="Trás-os-Montes e Alto Douro">Trás-os-Montes e Alto Douro</option>
+
+                    </optgroup>
+                </select>
+            </p>
+
+            <p>
+                <label for="icep">CEP:</label>
+                <input type="text" name="cep" id="icep" autocomplete="postal-code" minlength="8" maxlength="8" placeholder="0000-000">
             </p>
 
         </fieldset>
 
-
         <fieldset>
+            <legend>Preferências</legend>
+
+            <fieldset>
+                <legend>Gênero</legend>
+                <p>
+                    
+                    <input type="radio" name="sexo" id="imasc" value="masculino" checked><label for="imasc">Masculino</label>
+                    <input type="radio" name="sexo" id="ifem" value="feminino"><label for="ifem">Feminino</label>
+                    <input type="radio" name="sexo" id="ioutro" value="outro"><label for="ioutro">Outro</label>
+                </p>
+            </fieldset>
+
+            <fieldset>
+                <legend>Interesses</legend>
+                <p>
+                    <input type="checkbox" name="mus" id="imus">Música
+                    <input type="checkbox" name="esp" id="iesp">Esportes
+                    <input type="checkbox" name="viag" id="ivag">Viagens
+                    <input type="checkbox" name="tec" id="itec">Tecnologia
+                </p>
+            </fieldset>
+
+            <fieldset>
+                <legend>Tipo de Conta</legend>
+                <select name="itipo" id="itipo">
+                    <option value="">Gratuita</option>
+                    <option value="">Premium</option>
+                    <option value="">Empresarial</option>
+                </select>
+            </fieldset>
+        </fieldset>
+
+        <fieldset class="actions">
             <legend>Ações</legend>
             <p>
                 <input type="submit" value="Enviar">
